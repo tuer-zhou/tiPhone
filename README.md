@@ -1,7 +1,7 @@
 # ☎️ tiPhone – The Ultimate Retro-VoIP Side Quest
 
 <p align="center">
-  <img src="./assets/rotary_phone.jpg" alt="tiPhone Inspiration: Classic Rotary Phone" width="600">
+  <img src="./assets/rotary_phone_unsplashed.jpg" alt="tiPhone Inspiration: Classic Rotary Phone" width="600">
 </p>
 
 The **tiPhone** is a modern reimagining of the classic rotary dial landline telephone. It blends the tactile nostalgia of the analog era with 21st-century tech like VoIP, wireless handsets, and video calling. 
