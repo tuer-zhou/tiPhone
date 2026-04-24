@@ -39,3 +39,18 @@
 
 # debug information files
 *.dwo
+
+# GEMINI RECOMMENDATION ?!?!?
+# # Compiled binaries
+# *.bin
+# *.elf
+
+# # IDE folders
+# .vscode/
+# .idea/
+# build/
+# node_modules/
+
+# # OS files
+# .DS_Store
+# Thumbs.db

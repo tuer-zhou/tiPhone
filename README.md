@@ -23,6 +23,23 @@ The tiPhone ecosystem consists of a custom 3D-printed base station and a smart w
 
 ---
 
+## 📂 Repository Structure
+
+```text
+tiPhone/
+├── assets/                # Branding, logos, and README images
+├── client/                # Everything running on the actual phone hardware
+│   ├── base-station/      # ESP32 code for the rotary base (Gateway)
+│   └── handset/           # ESP32 code for the wireless handset
+├── documentaion/          # All kind of relevant documenation for this project
+├── hardware/              # 3D files and wiring diagrams
+├── server/                # The VoIP Backend, Database, and Web-UI
+├── LICENSE                # MIT License file
+└── README.md              # Project documentation
+```
+
+---
+
 ## 🏗 Hardware Architecture
 
 ### 1. The Base Station (The Command Center)

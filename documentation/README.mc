@@ -1,0 +1,1 @@
+Zusätzliche Anleitungen, Schaltpläne (PDF), Pin-Belegung, etc

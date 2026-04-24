@@ -1,4 +1,9 @@
-# tiPhone-client
+# tiPhone Client
+This folder contains the code for the physical hardware.
+* **base-station/**: Logic for the rotary dial and WiFi/BT gateway.
+* **handset/**: Logic for the wireless communication, display, and audio.
+
+---
 
 The idea is to use an esp32 or a raspberry pi pico w
 

@@ -1,4 +1,7 @@
-# tiPhone-server
+# tiPhone Server
+VoIP management, user database, and communication protocols.
+
+---
 
 The server contains a database that has entries for every participant
 
