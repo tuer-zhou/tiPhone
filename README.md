@@ -92,3 +92,11 @@ The tiPhone does not use the public telephone network. It relies on a dedicated,
 ---
 
 > **"Reinventing the dial: Retro aesthetics, modern protocols."**
+
+---
+
+## 📜 Credits & License
+* **Concept & Development:** Erwin, Florian, Julius
+* **README Header Image:** [Vintage Rotary Phone](https://unsplash.com/de/fotos/vintage-wahlscheibentelefon-auf-einem-deckchen-p_v6L8nNWK0) by [mdreza jalali]
+* **License:** This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
