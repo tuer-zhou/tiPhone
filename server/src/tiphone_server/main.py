@@ -23,9 +23,6 @@ class AdvertisementResponse(BaseModel):
     """
     phone_number: str
 
-class KeepAliveMsg(BaseModel):
-    secret: str
-
 class SDP(BaseModel):
     """
     Session Description Protocol
@@ -56,15 +53,6 @@ async def advertisement(ad: AdvertisementMsg) -> AdvertisementResponse:
     """
     # TODO
     return 
-
-@app.post("/keepAlive")
-async def keep_alive(msg: KeepAliveMsg):
-    """
-    Updates status of client
-    is considered offline when no keep alive messages arrives for 45 seconds
-    """
-    # TODO
-    return
 
 @app.websocket("/ws")
 async def websocket_endpoint(websocket: WebSocket):
