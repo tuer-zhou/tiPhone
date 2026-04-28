@@ -1,13 +1,16 @@
-FROM python:3.12
+FROM python:3.10-alpine
 
-RUN pip install -U pdm
+#RUN pip install -U pdm
 
-ENV PDM_CHECK_UPDATE=false
+#ENV PDM_CHECK_UPDATE=false
 
-COPY pyproject.toml pdm.lock
-COPY src/
+COPY pyproject.toml pdm.lock requirements.txt /project/
+COPY src/ /project/src
 
-RUN pdm install --check --prod --no-editable
+WORKDIR /project/
+#RUN pdm lock
+#RUN pdm install --check --prod --no-editable
+RUN pip install -r requirements.txt
 
-WORKDIR src/tiphone_server
+WORKDIR /project/src/tiphone_server
 CMD ["fastapi", "run"]
