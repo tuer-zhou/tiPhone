@@ -1,4 +1,5 @@
 from pydantic import BaseModel
+from typing import Literal
 
 class AdvertisementMsg(BaseModel):
     """
@@ -15,15 +16,28 @@ class AdvertisementResponse(BaseModel):
     """
     phone_number: str
 
-class SDP(BaseModel):
-    """
-    Session Description Protocol
-    """
-    # TODO: rework if necessary
-    v: str
-    o: str
-    s: str
-    c: str
-    t: str
-    m: str
-    a: str
+class WebSocketMsg(BaseModel):
+    msg_type: Literal["INIT", "CALL_REQUEST", "CALL_END", "CALL_CANCEL", "CALL_ACCEPT", "ICE_EXCHANGE"]
+    src: str
+    dst: str
+
+class WebSocketInit(BaseModel):
+    msg_type: Literal["INIT"]
+    secret: str
+    src: str
+
+class CallRequest(WebSocketMsg):
+    sdp_offer: str
+
+class CallEnd(WebSocketMsg):
+    pass
+
+class CallCancel(WebSocketMsg):
+    pass
+
+class CallAccept(WebSocketMsg):
+    sdp_answer: str
+
+class ICEExchagne(WebSocketMsg):
+    ice_data: str
+
