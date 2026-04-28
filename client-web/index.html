@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<index>
+    <head>
+        <script defer src="./index.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    </head>
+    <body>
+        my number: 
+        <span id="myNumber"></span>
+        <br>
+        Handset: <button id="handset" onclick="interactHandSet()">Pick up</button>
+        <br>
+        <input id="numberField" type="text" placeholder="Enter Phone Number" disabled/>
+        
+        <br>
+        <button class="numbers" onclick="handleNumberInput(1)">1</button>
+        <button class="numbers" onclick="handleNumberInput(2)">2</button>
+        <button class="numbers" onclick="handleNumberInput(3)">3</button>
+        <br>
+        <button class="numbers" onclick="handleNumberInput(4)">4</button>
+        <button class="numbers" onclick="handleNumberInput(5)">5</button>
+        <button class="numbers" onclick="handleNumberInput(6)">6</button>
+        <br>
+        <button class="numbers" onclick="handleNumberInput(7)">7</button>
+        <button class="numbers" onclick="handleNumberInput(8)">8</button>
+        <button class="numbers" onclick="numbersClick(9)">9</button>
+        <br>
+        <button class="numbers" onclick="handleNumberInput(0)">0</button>
+
+        <br>
+        <br>
+        <audio id="ringtone" controls hidden>
+            <source src="old_ring_tone.mp3" type="audio/mpeg">
+            Browser does not support audio types (mp3)
+        </audio>
+    </body>
+</index>
