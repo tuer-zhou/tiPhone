@@ -1,4 +1,5 @@
 from fastapi import WebSocket
+from json.decoder import JSONDecodeError
 
 class WebSocketConnectionManager:
     def __init__(self) -> None:
@@ -12,9 +13,16 @@ class WebSocketConnectionManager:
         await ws.accept()
         self.active_connections.append(ws)
 
-    async def map_connection_to_number(self, ws: WebSocket):
-        json_data = await ws.receive_json()
-        self.dict_connctions[json_data["src"]] = ws
+    async def map_connection_to_number(self, ws: WebSocket) -> bool:
+        try:
+            json_data = await ws.receive_json()
+            if json_data.get("src", None):
+                self.dict_connctions[json_data["src"]] = ws
+                return True
+            else:
+                return False
+        except JSONDecodeError:
+            return False
 
     async def send_text_to_number(self, number: str, text: str):
         dst_ws = self.dict_connctions.get(number, None)

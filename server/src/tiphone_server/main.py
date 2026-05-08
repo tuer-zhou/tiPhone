@@ -45,7 +45,11 @@ async def websocket_endpoint(websocket: WebSocket):
     """
     await ws_manager.accept_new_connection(websocket)
     # TODO: might change to websocket only
-    await ws_manager.map_connection_to_number(websocket)
+    if not await ws_manager.map_connection_to_number(websocket):
+        # close connection that do not send correct msg at the beginning
+        ws_manager.remove_connection(websocket)
+        await websocket.close()
+        return
     logger.debug("new websocket connection")
     try:
         while True:
